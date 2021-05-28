@@ -1,0 +1,21 @@
+El siguiente comando se utiliza para la creación de la imagen de nodejs con los archivos necesarios para la Traducción de Código java a javascript
+docker build -t node-js .
+
+El siguiente comando se utiliza para la creación de la imagen de nodejs con los archivos necesarios para la traducción de código java a python
+docker build -t node-py .
+
+Se siguiente comando se utilizó para la creación de la imagen golang dende esta la página web que consume las apis de las demás imágenes creadas anteriormente
+docker build -t go-web .
+
+Este comando inicia la api del Traductor a JavaScript dentro de un conteiner, la api se consume dentro del conteiner dentro del puerto 8001 y a fuera del conteiner él es puerto 9001
+docker run -it -p 9001:8001 node-js
+
+Este Comando inicia la api del Traductor a Python dentro de un conteiner, la api se consume dentro del conteiner dentro del puerto 8002 y a fuera del conteiner él es puerto 9002
+docker run -it -p 9002:8002 node-py
+
+Este comando inicia la página desde donde se consumen las apis
+docker run -it -p 9015:8015 go-web
+
+una vez iniciado el continer ingresamos a le y ejecutamos el comando
+go run index.go
+para levantar la pagina web que consume las apis

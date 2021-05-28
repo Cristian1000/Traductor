@@ -1,0 +1,4 @@
+Este comando inicia la api del Traductor a JavaScript
+docker run -it -p 9001:8001 node-js
+Este Comando inicia la api del Traductor a Python
+docker run -it -p 9002:8002 node-py

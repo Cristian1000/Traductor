@@ -1,0 +1,19 @@
+{
+  "name": "python",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Analizador.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Daniel Raguay Vicente",
+  "license": "ISC"
+}

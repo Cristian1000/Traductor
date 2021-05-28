@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Traductor</title>
+	
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">201603103</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <input id='abrirarchivo' type='file' accept='text/plain' onchange='openFile(event)' >
+            </ul>
+		</div>
+        
+		<div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <button type="button" class="btn btn-success" onclick="Analizar()">Traducir</button>
+            </ul>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <button type="button" class="btn btn-success" onclick="Descargar()">Descargar</button>
+            </ul>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <button type="button" class="btn btn-success" onclick="DescargarJava()" >Java Script</button>
+            </ul>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <button type="button" class="btn btn-success" onclick="AST_Java()" >AST Java Script</button>
+            </ul>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <button type="button" class="btn btn-success" onclick="DescargarPython()">Python</button>
+            </ul>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <!-- BOTON: Llama al metodo Analizar dentro del main.js -->
+                <button type="button" class="btn btn-success" onclick="AST_Python()">AST Python</button>
+            </ul>
+		</div>
+		
+    </nav>
+
+
+    <!-- CONSOLA DE ENTRADA -->
+    <br>
+    <h3>Entrada:</h3>
+    <div id="Editor" style="height: 300px;">
+    </div>
+
+    <!-- CONSOLA DE SALIDA -->
+    <br>
+    <h3>Java Script:</h3>
+	<div id="javascript" style="height: 200px;" disabled="false" > </div>
+	
+	<h3>Python:</h3>
+    <div id="Python" style="height: 200px;" disabled="false" > </div>
+
+	<script type="text/javascript">
+
+        var Centrada = ace.edit("Editor");
+        
+        Centrada.setTheme("ace/theme/monokai");
+        Centrada.session.setMode("ace/mode/java");
+        Centrada.setFontSize("14px");
+
+        var CJavaScript = ace.edit("javascript");
+		CJavaScript.setTheme("ace/theme/monokai");
+        CJavaScript.session.setMode("ace/mode/java");
+        CJavaScript.setFontSize("14px");
+
+		var CPython = ace.edit("Python");
+		CPython.setTheme("ace/theme/monokai");
+        CPython.session.setMode("ace/mode/java");
+		CPython.setFontSize("14px");
+		
+    </script>
+
+
+    <script src="JavaScript/Consultas.js"></script>
+    <script src="src/Analizador/Analisis.js"></script>
+
+
+</body>
+
+</html>

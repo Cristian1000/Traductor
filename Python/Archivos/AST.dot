@@ -1,0 +1,37 @@
+digraph G{
+
+ 	node[shape=box]; 
+	rankdir=UD;
+	nodo0[label="Arbol Lexico"];
+	nodo1[label="Clase"];
+	nodo0 ->nodo1;
+	nodo2[label="public"];
+	nodo1 -> nodo2;
+	nodo3[label="Tipo"];
+	nodo1 -> nodo3;
+	nodo4[label="hola"];
+	nodo1 -> nodo4;
+	nodo5[label="{"];
+	nodo1 -> nodo5;
+	nodo6[label="Bloque"];
+	nodo1 -> nodo6;
+	nodo7[label="Variable"];
+	nodo6 -> nodo7;
+	nodo8[label="Tipo"];
+	nodo7 -> nodo8;
+	nodo9[label="Identificador"];
+	nodo7 -> nodo9;
+	nodo10[label="a"];
+	nodo9 -> nodo10;
+	nodo11[label="Mas"];
+	nodo9 -> nodo11;
+	nodo12[label="="];
+	nodo11 -> nodo12;
+	nodo13[label="5"];
+	nodo11 -> nodo13;
+	nodo14[label=";"];
+	nodo7 -> nodo14;
+	nodo15[label="}"];
+	nodo1 -> nodo15;
+
+}
